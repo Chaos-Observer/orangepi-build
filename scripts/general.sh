@@ -218,10 +218,11 @@ create_sources_list()
 
 	sid) # sid is permanent unstable development and has no such thing as updates or security
 	cat <<- EOF > "${basedir}"/etc/apt/sources.list
-	deb http://${DEBIAN_MIRROR} $release main contrib non-free non-free-firmware
+	deb https://snapshot.debian.org/archive/debian-ports/20221225T084846Z unstable main
+	#deb http://${DEBIAN_MIRROR} $release main contrib non-free non-free-firmware
 	#deb-src http://${DEBIAN_MIRROR} $release main contrib non-free non-free-firmware
 
-	deb http://${DEBIAN_MIRROR} unstable main contrib non-free non-free-firmware
+	#deb http://${DEBIAN_MIRROR} unstable main contrib non-free non-free-firmware
 	#deb-src http://${DEBIAN_MIRROR} unstable main contrib non-free non-free-firmware
 	EOF
 	;;

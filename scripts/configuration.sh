@@ -355,12 +355,12 @@ if [[ $BUILD_DESKTOP == "yes" && -z ${DESKTOP_APPGROUPS_SELECTED+x} && ${RELEASE
 		options+=("${appgroup}" "${appgroup^}" off)
 	done
 
-	DESKTOP_APPGROUPS_SELECTED=$(\
-		show_select_menu \
-		"Choose desktop softwares to add" \
-		"$backtitle" \
-		"Select which kind of softwares you'd like to add to your build" \
-		"${options[@]}")
+	#DESKTOP_APPGROUPS_SELECTED=$(\
+	#	show_select_menu \
+	#	"Choose desktop softwares to add" \
+	#	"$backtitle" \
+	#	"Select which kind of softwares you'd like to add to your build" \
+	#	"${options[@]}")
 
 	DESKTOP_APPGROUPS_SELECTED=${DESKTOP_APPGROUPS_SELECTED//\"/}
 
